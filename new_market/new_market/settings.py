@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'mc_donalds',
+    'board',
     'fpages',
 ]
 
@@ -129,8 +129,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CELERY_BROKER_URL = 'redis://default:fRl7GpEk8jLvlMqQUvTteOXfuEvV3xwF@redis-16828.c246.us-east-1-4.ec2.cloud.redislabs.com:16828'
-CELERY_RESULT_BACKEND = 'redis://default:fRl7GpEk8jLvlMqQUvTteOXfuEvV3xwF@redis-16828.c246.us-east-1-4.ec2.cloud.redislabs.com:16828'
+
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
